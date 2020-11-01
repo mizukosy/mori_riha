@@ -1,0 +1,10 @@
+<%= form_with model: @th, url:therapists_path, local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+  <div class="therapist-form">
+    療法士の新規登録
+    <%= f.text_field :name, class:"name", placeholder:"名前" %>
+    <%= f.collection_select(:therapist_type_id, TherapistType.all, :id, :name,{}, {class:"thrapist-type"}) %>
+    <%= f.text_field :exp_year, class:"year", placeholder:"経験年数"%>
+    <%= f.submit "登録",class:"submit-btn" %>
+  </div>
+<% end %>
