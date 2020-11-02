@@ -1,0 +1,5 @@
+  <%= @therapist.name %>
+  <%= @therapist.therapist_type.name %>
+  <%= @therapist.exp_year %> 年
+
+<%= link_to "編集する", edit_therapist_path(@therapist.id) %>

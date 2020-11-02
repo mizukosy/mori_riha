@@ -1,7 +1,7 @@
 <h1>守山いつき病院　リハビリ管理用紙</h1>
 
 <div class="therapist">
-  <%= link_to "療法士", new_therapist_path %>
+  <%= link_to "療法士新規登録", new_therapist_path %>
 </div>
 
 <div class="patient">
@@ -10,4 +10,12 @@
 
 <div class="patient">
   <%= link_to "日報確認", "#" %>
+</div>
+
+<div>
+  <% @therapists.each do |t| %>
+    <%= link_to "詳細",therapist_path(t.id) %>
+    <%= t.name %>
+    <%= t.therapist_type.name %>
+  <% end %>
 </div>

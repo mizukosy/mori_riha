@@ -27,7 +27,8 @@
 | colum       | type     | options                       |
 | ----------- | -------- | ----------------------------- |
 | name        | string   | null:false                    |
-| location    | integer  | null:false, acceptance: true  |
+| tag         | integer  | null:false                    |
+| location_id | integer  | null:false, acceptance: true  |
 | unit        | integer  | null:false                    |
 | time        | datetime | null:false, uniqueness: true  |
 | disease_id  | integer  | null:false, acceptance: true  |
